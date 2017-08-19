@@ -37,7 +37,7 @@ def train(data):
 
     return model
 
-def get_rec(user, num_rec=10):
+def get_rec(user, num_rec=100):
     global model
     user_hash = int_hash(user)
     return model.recommendProducts(user_hash, num_rec)

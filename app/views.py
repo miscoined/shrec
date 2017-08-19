@@ -54,7 +54,7 @@ def after_login(resp):
     rec.train(data)
     print('done!')
 # just some test games for now
-    recs = rec.get_rec(int(g.user), 100)
+    recs = rec.get_rec(int(g.user), 10000)
     # need to filter for games in library
     unplayed_games =  user_info.get_unplayed_games(g.user)
     games = [r.product for r in recs if r.product in unplayed_games]
